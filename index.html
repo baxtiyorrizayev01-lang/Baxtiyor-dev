@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baxtiyor Rizayev | Portfolio</title>
+    <!-- Google Fonts va Iconlar uchun -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Umumiy sozlamalar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0f172a; /* To'q ko'k rang */
+            color: #f8fafc;
+        }
+
+        /* Navigatsiya qismi */
+        header {
+            background-color: rgba(15, 23, 42, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #38bdf8; /* Ochiq havorang */
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* Bosh sahifa (Hero) */
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #0284c7;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Qismlar sarlavhasi */
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #38bdf8;
+        }
+
+        /* Kartochkalar (Loyihalar va Maqsadlar) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #334155;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card i {
+            font-size: 40px;
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 15px;
+        }
+
+        /* Aloqa qismi */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: #1e293b;
+            color: #38bdf8;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #38bdf8;
+            color: #0f172a;
+            transform: scale(1.1);
+        }
+
+        /* Telefonlar uchun moslashuv (Responsive) */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .nav-links {
+                display: none; /* Telefonda menyu yashiriladi, keyinchalik burger-menu qoshish mumkin */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigatsiya -->
+    <header>
+        <nav>
+            <a href="#" class="logo">BR.</a>
+            <ul class="nav-links">
+                <li><a href="#about">Men haqimda</a></li>
+                <li><a href="#projects">Loyihalar</a></li>
+                <li><a href="#goals">Maqsadlar</a></li>
+                <li><a href="#contact">Aloqa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bosh sahifa -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Salom, men <span>Baxtiyor Rizayev</span>man!</h1>
+            <p>Veb-dasturlashga qiziquvchi yosh dasturchi, kontent kreyator, kibersport ixlosmandi va bo'lajak IT mutaxassisi.</p>
+            <a href="#projects" class="btn">Mening loyihalarim</a>
+        </div>
+    </section>
+
+    <!-- Men haqimda -->
+    <section id="about">
+        <h2 class="section-title">Men haqimda</h2>
+        <div class="card" style="text-align: left;">
+            <p style="color: #f8fafc; font-size: 16px; line-height: 1.8;">
+                Men 2009-yil 29-mayda tug'ilganman. Yoshligimdan texnologiyalar va raqamli olamga qiziqishim juda yuqori. Hozirda <b>2 ta milliy sertifikatga</b> egaman va o'z bilimlarimni amaliyotda sinab kelmoqdaman. 
+                <br><br>
+                Bo'sh vaqtlarimda e-sport, xususan <b>CS2</b> bilan shug'ullanaman. Bu menga tezkor qaror qabul qilish, jamoada ishlash va strategik fikrlashni o'rgatadi. 
+            </p>
+        </div>
+    </section>
+
+    <!-- Loyihalar -->
+    <section id="projects">
+        <h2 class="section-title">Amaliy Tajribam</h2>
+        <div class="grid-container">
+            <!-- Saytlar -->
+            <div class="card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Veb-saytlar</h3>
+                <p>Hozirgacha mustaqil ravishda 3 ta shaxsiy veb-sayt yaratganman. Veb-dasturlash bo'yicha kodlash va dizayn qilish ko'nikmalariga egaman.</p>
+            </div>
+            <!-- YouTube -->
+            <div class="card">
+                <i class="fa-brands fa-youtube"></i>
+                <h3>YouTube Faoliyati</h3>
+                <p>O'zimning shaxsiy YouTube kanalimda faoliyat yuritaman. Video montaj va kreativ kontent yaratish tajribasiga egaman.</p>
+            </div>
+            <!-- Instagram -->
+            <div class="card">
+                <i class="fa-brands fa-instagram"></i>
+                <h3>Instagram Loyihalar</h3>
+                <p>Hozirda 2 ta Instagram kanalini yuritaman. SMM, auditoriya bilan ishlash va vizual dizayn yo'nalishlarida amaliy tajribaga egaman.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maqsadlar -->
+    <section id="goals">
+        <h2 class="section-title">Kelajakdagi Maqsadlarim</h2>
+        <div class="card">
+            <i class="fa-solid fa-graduation-cap" style="font-size: 50px;"></i>
+            <h3>Oliy Ta'lim</h3>
+            <p>Eng asosiy maqsadlarimdan biri — <b>Germaniyadagi nufuzli universitetlarning</b> IT yo'nalishida o'qishga kirish yoki O'zbekistondagi <b>Cyber University'da</b> ta'lim olib, jahon darajasidagi yetuk kiber-mutaxassis bo'lib yetishish. Har kuni shu maqsad sari o'z ustimda ishlayapman.</p>
+        </div>
+    </section>
+
+    <!-- Aloqa -->
+    <section id="contact">
+        <h2 class="section-title">Men bilan bog'lanish</h2>
+        <div style="text-align: center;">
+            <p style="color: #94a3b8; margin-bottom: 20px;">Men bilan hamkorlik qilish yoki fikr almashish uchun quyidagi tarmoqlar orqali yozishingiz mumkin:</p>
+            <div class="social-links">
+                <!-- Havolalarni (href="#") o'zingizning havolangiz bilan almashtiring -->
+                <a href="#" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="mailto:emailingizni_yozing@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; background: #0f172a; color: #64748b; margin-top: 50px; border-top: 1px solid #1e293b;">
+        <p>&copy; 2024 Baxtiyor Rizayev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>
