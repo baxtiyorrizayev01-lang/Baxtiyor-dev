@@ -13,7 +13,7 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fn);overflow-x:hidd
 a{text-decoration:none;color:inherit}ul{list-style:none}
 
 .sidebar{position:fixed;left:0;top:0;bottom:0;width:56px;background:var(--bg2);border-right:1px solid var(--brd);display:flex;flex-direction:column;align-items:center;padding:1.25rem 0;gap:.25rem;z-index:300}
-.sb-logo{width:36px;height:36px;background:linear-gradient(135deg,var(--red),#ff8c00);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;font-family:var(--orb);font-size:10px;font-weight:900;color:#fff;margin-bottom:1rem;flex-shrink:0;box-shadow:0 0 16px rgba(230,57,70,.4)}
+.sb-logo {width:36px;height:36pxobject-fit:contain;margin-bottom:1rem;flex-shrink:0;}
 .sb-link{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:1rem;transition:all .2s;position:relative;cursor:pointer}
 .sb-link:hover,.sb-link.active{background:rgba(230,57,70,.15);color:var(--red)}
 .sb-link::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);background:var(--bg3);color:var(--txt);font-family:var(--mono);font-size:11px;padding:.3rem .7rem;border-radius:4px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s;border:1px solid var(--brd);z-index:100}
@@ -262,7 +262,7 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3rem 3.5rem
 <body>
 
 <aside class="sidebar">
-  <div class="sb-logo">BR</div>
+  <img src="logo.png" alt="Logo" class="sb-logo">
   <a class="sb-link active" href="#hero" data-tip="Home">🏠</a>
   <a class="sb-link" href="#about" data-tip="About">👤</a>
   <a class="sb-link" href="#skills" data-tip="Skills">⚙</a>
